@@ -3,7 +3,7 @@
   <groupId>B12-Jenkins</groupId>
   <artifactId>B12-Jenkins</artifactId>
   <version>0.0.1-SNAPSHOT</version>
- 
+
 <build>
 		<plugins>
 			<plugin>
