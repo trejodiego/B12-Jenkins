@@ -18,7 +18,7 @@ import io.cucumber.junit.CucumberOptions;
 					"json:target/cucumber.json",
 					"html:target/cucumber.html"}
 				)
-
+ 
 public class Runner {
 
 }
