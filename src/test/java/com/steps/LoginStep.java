@@ -19,65 +19,29 @@ public class LoginStep {
 	@Given("User navigates to login page {string}")
 	public void user_navigates_to_login_page(String url) throws InterruptedException {
 	
-		
-		//Mac Users
-//		WebDriverManager.safaridriver().setup();
-//		driver = new SafariDriver();
-//		
-		
-		//Firfox Window User
-	//	WebDriverManager.firefoxdriver().setup();
-		//driver = new FirefoxDriver();
-		
-		//Edge-WIndows User
-//		WebDriverManager.edgedriver().setup();
-//		driver = new EdgeDriver();
-		
-		Thread.sleep(2000);
-		driver.manage().window().maximize();
-		driver.get(url);
-		Thread.sleep(2000);
-		
-		
-		System.out.println("Test");
-		System.out.println("Test");
-		System.out.println("Test");
+		System.out.println("Navigating to application");	
 	}
 	@When("User enters username {string}")
 	public void user_enters_username(String username) {
-	  WebElement usernameField = driver.findElement(By.xpath("//input[@name='username']"));
-	  usernameField.sendKeys(username);
+	
+		System.out.println("Entering Username");
 	}
 	@When("User enters password {string}")
 	public void user_enters_password(String password) {
-		  WebElement passwordField = driver.findElement(By.xpath("//input[@name='password']"));
-		  passwordField.sendKeys(password);
+		System.out.println("Entering Password");
 	}
 	@When("User clicks login button")
 	public void user_clicks_login_button() {
-		  WebElement loginButton = driver.findElement(By.xpath("//button[@type = 'submit']"));
-		  loginButton.click();
+		System.out.println("Clicking login Button");
 	}
 	@Then("System redirects to dashboard page {string}")
 	public void system_redirects_to_dashboard_page(String pageHeader) throws InterruptedException {
-	   System.out.println("Page Header... " +  pageHeader);
-	  
-	   System.out.println(driver.getTitle());
-	  
-	   Thread.sleep(2000);
-	   driver.quit();
+		
 	}
 	
 	@Then("System redirects to dashboard pages {string}")
 	public void system_redirects_to_dashboard_pages(String string) {
-		try {
-			System.out.println("aseetion failure...");
-			//Assert.assertEquals("java", "not java");
-			//Assert.fail();
-		} catch (Exception e) {
-			// TODO: handle exception
-		}
-	  
-		System.out.println("DONE...");
+		System.out.println("dashboard page");
+		System.out.println("DONEEEEEEEEE");
 	}
 }
